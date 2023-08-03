@@ -1,4 +1,4 @@
-# Spring Boot 3 Elastic Search
+# Spring Boot 3 Elasticsearch
 
 ## swagger
     http://localhost:8080/api/
