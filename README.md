@@ -8,11 +8,15 @@
 
 ## elastic search
     docker network create elastic
-    docker run -d --name elasticsearch --net elastic -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" elasticsearch:7.17.10
+    docker run -d --memory="4g" --name elasticsearch --net elastic -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" elasticsearch:7.17.10
 
     7.17
     wsl -d docker-desktop
     sysctl -w vm.max_map_count=262144
+
+    /usr/share/elasticsearch/config    
+    discovery.type: single-node
+    ingest.geoip.downloader.enabled: false
 
     8.9
     https://localhost:9200
