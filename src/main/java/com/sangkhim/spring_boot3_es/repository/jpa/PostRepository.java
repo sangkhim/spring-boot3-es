@@ -1,4 +1,4 @@
-package com.sangkhim.spring_boot3_es.repository;
+package com.sangkhim.spring_boot3_es.repository.jpa;
 
 import com.sangkhim.spring_boot3_es.model.entity.Post;
 import java.util.List;

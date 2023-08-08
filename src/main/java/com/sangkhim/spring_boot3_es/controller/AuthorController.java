@@ -28,8 +28,8 @@ public class AuthorController {
   }
 
   @PostMapping("/v1/authors")
-  public ResponseEntity<Author> createOrUpdate(@RequestBody Author Author) {
-    Author updated = service.createOrUpdate(Author);
+  public ResponseEntity<Author> createOrUpdate(@RequestBody Author author) {
+    Author updated = service.createOrUpdate(author);
     return new ResponseEntity<>(updated, HttpStatus.OK);
   }
 

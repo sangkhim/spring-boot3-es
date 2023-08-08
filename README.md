@@ -9,6 +9,8 @@
 ## elastic search
     docker network create elastic
     docker run --name es01 --net elastic -p 9200:9200 -e "discovery.type=single-node" -d docker.elastic.co/elasticsearch/elasticsearch:8.9.0
+    https://localhost:9200
+    sudo bin/elasticsearch-setup-passwords interactive
 
 ## other
     Google Java Format

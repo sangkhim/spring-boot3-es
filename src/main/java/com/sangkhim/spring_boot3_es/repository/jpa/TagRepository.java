@@ -1,4 +1,4 @@
-package com.sangkhim.spring_boot3_es.repository;
+package com.sangkhim.spring_boot3_es.repository.jpa;
 
 import com.sangkhim.spring_boot3_es.model.entity.Tag;
 import org.springframework.data.jpa.repository.JpaRepository;

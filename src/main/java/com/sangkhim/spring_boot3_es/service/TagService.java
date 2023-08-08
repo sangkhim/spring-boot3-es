@@ -3,7 +3,7 @@ package com.sangkhim.spring_boot3_es.service;
 import com.sangkhim.spring_boot3_es.exception.BadRequestException;
 import com.sangkhim.spring_boot3_es.exception.DataNotFoundException;
 import com.sangkhim.spring_boot3_es.model.entity.Tag;
-import com.sangkhim.spring_boot3_es.repository.TagRepository;
+import com.sangkhim.spring_boot3_es.repository.jpa.TagRepository;
 import com.sangkhim.spring_boot3_es.utils.Translator;
 import java.text.MessageFormat;
 import java.util.List;

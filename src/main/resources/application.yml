@@ -16,3 +16,9 @@ spring:
   h2:
     console:
       enabled: true
+  elasticsearch:
+    uris: https://localhost:9200
+    username: elastic
+    password: elastic
+    repositories:
+      enabled: true

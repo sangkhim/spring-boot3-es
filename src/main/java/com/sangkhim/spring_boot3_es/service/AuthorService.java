@@ -3,9 +3,10 @@ package com.sangkhim.spring_boot3_es.service;
 import com.sangkhim.spring_boot3_es.exception.BadRequestException;
 import com.sangkhim.spring_boot3_es.exception.DataNotFoundException;
 import com.sangkhim.spring_boot3_es.model.entity.Author;
-import com.sangkhim.spring_boot3_es.repository.AuthorRepository;
+import com.sangkhim.spring_boot3_es.repository.es.AuthorRepository;
 import com.sangkhim.spring_boot3_es.utils.Translator;
 import java.text.MessageFormat;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import lombok.RequiredArgsConstructor;
@@ -18,8 +19,10 @@ public class AuthorService {
   private final AuthorRepository authorRepository;
 
   public List<Author> getAllAuthors() {
-    List<Author> authorList = authorRepository.findAll();
-    return authorList;
+    Iterable<Author> authorList = authorRepository.findAll();
+    List<Author> target = new ArrayList<>();
+    authorList.forEach(target::add);
+    return target;
   }
 
   public Author getById(Long id) {
