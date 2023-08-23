@@ -1,7 +1,7 @@
 package com.sangkhim.spring_boot3_es.controller;
 
-import com.sangkhim.spring_boot3_es.model.entity.Author;
-import com.sangkhim.spring_boot3_es.service.AuthorService;
+import com.sangkhim.spring_boot3_es.model.es.Author;
+import com.sangkhim.spring_boot3_es.service.AuthorEsService;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -11,29 +11,29 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @CrossOrigin
 @RequiredArgsConstructor
-public class AuthorController {
+public class AuthorEsController {
 
-  private final AuthorService service;
+  private final AuthorEsService service;
 
-  @GetMapping("/v1/authors")
+  @GetMapping("/v1/es/authors")
   public ResponseEntity<List<Author>> getAllAuthors() {
     List<Author> list = service.getAllAuthors();
     return new ResponseEntity<>(list, HttpStatus.OK);
   }
 
-  @GetMapping("/v1/authors/{id}")
+  @GetMapping("/v1/es/authors/{id}")
   public ResponseEntity<Author> getAuthorById(@PathVariable("id") Long id) {
     Author entity = service.getById(id);
     return new ResponseEntity<>(entity, HttpStatus.OK);
   }
 
-  @PostMapping("/v1/authors")
-  public ResponseEntity<Author> createOrUpdate(@RequestBody Author Author) {
-    Author updated = service.createOrUpdate(Author);
+  @PostMapping("/v1/es/authors")
+  public ResponseEntity<Author> createOrUpdate(@RequestBody Author author) {
+    Author updated = service.createOrUpdate(author);
     return new ResponseEntity<>(updated, HttpStatus.OK);
   }
 
-  @DeleteMapping("/v1/authors/{id}")
+  @DeleteMapping("/v1/es/authors/{id}")
   public void deleteById(@PathVariable("id") Long id) {
     service.deleteById(id);
   }
