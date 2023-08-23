@@ -1,6 +1,6 @@
 package com.sangkhim.spring_boot3_es.controller;
 
-import com.sangkhim.spring_boot3_es.model.entity.Author;
+import com.sangkhim.spring_boot3_es.model.es.Author;
 import com.sangkhim.spring_boot3_es.service.AuthorService;
 import java.util.List;
 import lombok.RequiredArgsConstructor;

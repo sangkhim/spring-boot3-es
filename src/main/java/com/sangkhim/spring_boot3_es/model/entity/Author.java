@@ -6,11 +6,9 @@ import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.data.elasticsearch.annotations.Document;
 
 @Entity
 @Table(name = "authors")
-@Document(indexName = "authors")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

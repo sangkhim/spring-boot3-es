@@ -6,7 +6,7 @@ import com.sangkhim.spring_boot3_es.model.dto.PostDTO;
 import com.sangkhim.spring_boot3_es.model.entity.Author;
 import com.sangkhim.spring_boot3_es.model.entity.Post;
 import com.sangkhim.spring_boot3_es.model.entity.Tag;
-import com.sangkhim.spring_boot3_es.repository.es.AuthorRepository;
+import com.sangkhim.spring_boot3_es.repository.jpa.AuthorRepository;
 import com.sangkhim.spring_boot3_es.repository.jpa.PostRepository;
 import com.sangkhim.spring_boot3_es.repository.jpa.TagRepository;
 import com.sangkhim.spring_boot3_es.utils.Translator;

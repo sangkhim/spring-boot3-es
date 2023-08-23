@@ -2,7 +2,7 @@ package com.sangkhim.spring_boot3_es.service;
 
 import com.sangkhim.spring_boot3_es.exception.BadRequestException;
 import com.sangkhim.spring_boot3_es.exception.DataNotFoundException;
-import com.sangkhim.spring_boot3_es.model.entity.Author;
+import com.sangkhim.spring_boot3_es.model.es.Author;
 import com.sangkhim.spring_boot3_es.repository.es.AuthorRepository;
 import com.sangkhim.spring_boot3_es.utils.Translator;
 import java.text.MessageFormat;
