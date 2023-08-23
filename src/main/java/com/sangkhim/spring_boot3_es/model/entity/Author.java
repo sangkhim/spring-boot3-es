@@ -1,22 +1,19 @@
 package com.sangkhim.spring_boot3_es.model.entity;
 
+import com.sangkhim.spring_boot3_es.model.entity.base.Base;
 import jakarta.persistence.*;
 import java.io.Serializable;
-import java.time.Instant;
 import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.SourceType;
-import org.hibernate.annotations.UpdateTimestamp;
 
 @Entity
 @Table(name = "authors")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Author implements Serializable {
+public class Author extends Base implements Serializable {
 
   private static final long serialVersionUID = 7156526077883281623L;
 
@@ -29,10 +26,4 @@ public class Author implements Serializable {
 
   @OneToMany(mappedBy = "author")
   List<Post> postList;
-
-  @CreationTimestamp(source = SourceType.DB)
-  private Instant createdOn;
-
-  @UpdateTimestamp(source = SourceType.DB)
-  private Instant lastUpdatedOn;
 }
