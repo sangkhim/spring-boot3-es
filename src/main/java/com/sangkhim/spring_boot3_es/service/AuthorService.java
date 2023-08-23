@@ -6,10 +6,10 @@ import com.sangkhim.spring_boot3_es.model.entity.Author;
 import com.sangkhim.spring_boot3_es.repository.es.AuthorRepository;
 import com.sangkhim.spring_boot3_es.utils.Translator;
 import java.text.MessageFormat;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import lombok.RequiredArgsConstructor;
+import org.apache.commons.collections4.IterableUtils;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -19,10 +19,7 @@ public class AuthorService {
   private final AuthorRepository authorRepository;
 
   public List<Author> getAllAuthors() {
-    Iterable<Author> authorList = authorRepository.findAll();
-    List<Author> target = new ArrayList<>();
-    authorList.forEach(target::add);
-    return target;
+    return IterableUtils.toList(authorRepository.findAll());
   }
 
   public Author getById(Long id) {
