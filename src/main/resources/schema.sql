@@ -6,7 +6,9 @@ DROP TABLE IF EXISTS tags;
 CREATE TABLE authors
 (
   id   INT AUTO_INCREMENT PRIMARY KEY,
-  name VARCHAR(250) NOT NULL
+  name VARCHAR(250) NOT NULL,
+  created_on TIMESTAMP,
+  last_updated_on TIMESTAMP
 );
 
 CREATE TABLE tags
