@@ -31,7 +31,7 @@
     curl https://raw.githubusercontent.com/gravitee-io/gravitee-docker/master/apim/3.x/docker-compose.yml -o docker-compose.yml
     change version to 3.16.1
 
-    docker-compose up
+    docker-compose up -d --rm
 
 ## other
 
