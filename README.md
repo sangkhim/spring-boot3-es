@@ -23,16 +23,6 @@
     https://localhost:9200
     bin/elasticsearch-setup-passwords interactive
 
-## gravitee
-
-    https://medium.com/graviteeio/getting-gravitee-io-api-management-platform-up-and-running-on-a-local-machine-9408d07221e6
-    https://community.gravitee.io/t/elasticsearch-has-stopped-working/274/23
-    
-    curl https://raw.githubusercontent.com/gravitee-io/gravitee-docker/master/apim/3.x/docker-compose.yml -o docker-compose.yml
-    change version to 3.16.1
-
-    docker-compose up -d --rm
-
 ## other
 
     EnvFile
